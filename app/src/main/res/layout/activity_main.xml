@@ -1,18 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5BFF5722"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/parentLinear"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+    >
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player X"
+                android:textSize="20sp"
+               android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+            />
+            <TextView
+                android:id="@+id/playerOneScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+            />
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+        >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player O"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+            />
+            <TextView
+                android:id="@+id/playerTwoScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25sp"
+                android:layout_gravity="center"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parentLinear"
+        android:columnCount="3"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        >
+
+       <TextView
+           android:id="@+id/cell_0"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:gravity="center"
+           android:textSize="40sp"
+           android:background="@drawable/border"
+           android:layout_marginLeft="5dp"
+           android:layout_marginRight="5dp"
+           android:layout_columnWeight="1"
+           android:layout_marginBottom="10dp"
+       />
+        <TextView
+            android:id="@+id/cell_1"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:gravity="center"
+            android:textSize="40sp"
+           android:background="@drawable/border"
+           android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+       />
+        <TextView
+            android:id="@+id/cell_2"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:gravity="center"
+            android:textSize="40sp"
+           android:background="@drawable/border"
+           android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+        android:layout_columnWeight="1"
+       />
+
+        <TextView
+            android:id="@+id/cell_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:id="@+id/cell_4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="1"
+            />
+        <TextView
+            android:id="@+id/cell_5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="1"
+            />
+
+        <TextView
+            android:id="@+id/cell_6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="1"
+            />
+        <TextView
+            android:id="@+id/cell_7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="1"
+            />
+        <TextView
+            android:id="@+id/cell_8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="1"
+            />
+    </GridLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resetBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset game"
+        android:textColor="#E4DEDE"
+        android:layout_below="@+id/grid"
+        android:layout_margin="30dp"
+        android:backgroundTint="#FF7A22"
+        app:cornerRadius="10dp"
+        android:padding="10dp"
+    />
+
+</RelativeLayout>
