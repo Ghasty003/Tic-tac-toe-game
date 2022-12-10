@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!((TextView) view).getText().toString().equals("")) {
             return;
         }
+        cellCount++;
 
         String textID = view.getResources().getResourceEntryName(view.getId());
         int gameStatePointer = Integer.parseInt(textID.substring(textID.length() - 1));
@@ -83,7 +84,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             updateScore();
             resetGame();
-        } else {
+        } else if (cellCount == 9) {
+            Toast.makeText(this, "Draw game", Toast.LENGTH_SHORT).show();
+            resetGame();
+        }
+        else {
             if (currentPlayer.equals("X")) {
                 currentPlayer = "O";
             } else if (currentPlayer.equals("O")) {

@@ -188,7 +188,7 @@
         android:layout_margin="30dp"
         android:backgroundTint="#FF7A22"
         app:cornerRadius="10dp"
-        android:padding="10dp"
+        android:padding="15dp"
     />
 
 </RelativeLayout>
