@@ -10,9 +10,6 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width=""
-        android:layout_height=""
 
     <LinearLayout
         android:id="@+id/parentLinear"

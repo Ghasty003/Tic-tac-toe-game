@@ -12,8 +12,8 @@
         >
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/tictactoe"
             android:layout_centerInParent="true"
         />
