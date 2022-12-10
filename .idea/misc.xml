@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/USER PC/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/border.xml" value="0.104" />
+        <entry key="..\:/Users/USER PC/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/circle.xml" value="0.119" />
+        <entry key="..\:/Users/USER PC/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/circle_background.xml" value="0.119" />
         <entry key="..\:/Users/USER PC/AndroidStudioProjects/TicTacToe/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/USER PC/AndroidStudioProjects/TicTacToe/app/src/main/res/layout/toolbar.xml" value="0.25" />
       </map>
     </option>
   </component>

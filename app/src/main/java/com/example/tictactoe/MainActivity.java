@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             updateScore();
             resetGame();
+            return;
         } else if (cellCount == 9) {
             Toast.makeText(this, "Draw game", Toast.LENGTH_SHORT).show();
             resetGame();
